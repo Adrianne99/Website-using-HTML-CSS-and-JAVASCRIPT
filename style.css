@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/conthrax');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('images/main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'roboto', sans-serif;
+    overflow-x: hidden;
+}
+li{
+    list-style: none;
+}
+.navbar a{
+    font-size: 14px;
+}
+nav.black{
+        background-color: #191c41;
+}
+a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+.navbar{
+    height:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid grey;
+    font-family: 'roboto', sans-serif;
+}
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.navbar img{
+    width: 70px;
+    height: 70px;
+    margin-left: 40px;
+}
+.nav-link{
+    transition: 0.3s ease;
+    font-weight: 600;
+    color: white;
+    margin-right: 15px;
+}
+.nav-link:hover{
+    color: white;
+    opacity: 1;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3 ease;
+    background-color: white;
+}
+.first-image{
+    position: relative;
+    top: 50%;
+    left: 0;
+}
+
+/* home */
+h4{
+    color: #d14cc9 !important;
+    font-family: 'conthrax', sans-serif;
+}
+#home{
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    font-family: 'Conthrax', sans-serif;
+}
+#home h1{
+    font-weight: 700;
+}
+#home span{
+    color: #d14cc9;
+    font-size: 38px;
+}
+#home img{
+    width:300px;
+    height: 300px;
+    position: relative;
+    left: 38.5%;
+}
+/* END OF home */
+
+/* ABOUT */
+#about{
+    width: 100%;
+    height: 55vh;
+    background-color: #081b49;
+    font-family: 'roboto', sans-serif;
+}
+#about .col-lg-5 img{
+    width: 500px;
+}
+/* END OF ABOUT */
+
+
+/* TOKENOMICS */
+#tokenomics img{
+    width: 350px;
+}
+/* END OF TOKENOMICS */
+
+/*ROADMAP*/
+.roadmap-section{
+    min-height: 100vh;
+    padding: 100px 15px;
+}
+.roadmap-items{
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    position: relative;
+}
+.roadmap-items::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 76%;
+    background-color: white;
+    left: 50%;
+    top: 5%;
+}
+.roadmap-item{
+    width: 303px;
+    position: relative; 
+    margin-bottom: 50px;   
+    height: 409px;
+}
+.roadmap-item:last-child{
+    margin-bottom: 0;
+}
+.roadmap-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.roadmap-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.roadmap-content{
+    background-color: #212161;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid black;
+}
+.roadmap-dot{
+    height: 15px;
+    width: 15px;
+    background-color: grey;
+    position: absolute;
+    left: calc(50% - 6px);
+    border-radius: 50%;
+    top:10px;
+    z-index: 1;
+}
+.roadmap-date{
+    font-size: 25px;
+}
+.roadmap-content h2{
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.roadmap-content p{
+    color: black;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 22px;
+}
+/* FOOTER  */
+    footer i{
+        font-size: 35px;
+        margin: 20px;
+    }
+    a{
+        text-decoration: none;
+    }
+    i:hover{
+        color: white;
+    }
+
+@media(min-width: 1150px){
+    #about{
+        height: 65vh;
+    }
+}
+@media(max-width: 1149px){
+    #home{
+        height: 100vh;
+    }
+    #home img{
+        position: relative;
+        left: 34%;
+    }
+    #about{
+        height: 80vh;
+    }
+}
+@media(max-width: 991px){
+        .navbar{
+        width: 100%;
+        height:80px;
+        position: relative;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+    .hamburger.active:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active:nth-child(1){
+        transform: translateY(8px) rotate(45px);
+    }
+    .hamburger.active:nth-child(3){
+        transform: translateY(-8px) rotate(45px);
+    }
+    ul{
+        position: relative;
+    }
+    .nav-menu{
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 140px;
+        top: -100vh;
+        left: 0;
+        gap:10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin: auto;
+    }
+    .second-image{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left:0;
+        top: 0;
+    }
+    .nav-menu .active{
+        display: none;
+    }
+    .active{
+        top: 100%;
+        transition: 1s;
+    }
+
+    /* home */
+    #home img{
+        position: relative;
+        left: 28%;
+        bottom: 15%;
+    }
+    #home h1{
+        position: relative;
+        bottom: 15%;
+    }
+    #home h5{
+        position: relative;
+        bottom: 15%;
+    }
+    #about{
+        width: 100%;
+        height: 60vh;
+    }
+    .roadmap-items::before{
+        height: 76%;
+    }
+    /* #about{
+        height: 80vh;
+    } */
+}
+@media(max-width: 767px){
+    #home img{
+        position: relative;
+        left: 20%;
+    }
+    .roadmap-items::before{
+        left: 7px;
+        top: 2%;
+        height: 79%;
+    }
+    .roadmap-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .roadmap-item:nth-child(even),
+    .roadmap-item:nth-child(odd){
+        padding-left: 37px;
+    }
+    .roadmap-dot{
+        left: 0;
+    }
+    #about{
+        height: 65vh;
+    }
+}
+@media(max-width: 575px){
+    #home img{
+        position: relative;
+        left: 19%;
+    }
+    #about{
+        width: 100%;
+        height: 60vh;
+    }
+    .roadmap-items::before{
+        top: 5%;
+        height: 75%;
+    }
+}
+
+
+footer{
+    font-family: 'conthrax', sans-serif;
+}
+
+@media(max-width: 515px){
+    #about{
+        height: 65vh;
+    }
+}
+@media(max-width: 500px){
+    #home img{
+        position: relative;
+        left: 17%;
+    }
+    #about{
+        width: 100%;
+        height: 70vh;
+    }
+}
+
+@media(max-width: 447px){
+    #home img{
+        position: relative;
+        left: 14%;
+    }
+    .roadmap-items::before{
+        left: 7px;
+        height: 75%;
+    }
+}
+
+@media(max-width: 420px){
+    #home img{
+        position: relative;
+        left: 12%;
+    }
+}
+
+@media(max-width: 402px){
+    #home img{
+        position: relative;
+        left: 10%;
+    }
+    .roadmap-items::before{
+        top: 6%;
+        left: 7px;
+        height: 75%;
+    }
+}
+@media(max-width: 380px){
+    #home img{
+        position: relative;
+        left: 8%;
+    }
+    #about{
+        width: 100%;
+        height: 75vh;
+    }
+    .roadmap-items::before{
+        top: 6%;
+        left: 7px;
+        height: 76%;
+    }
+}
+
+#tokenlocker{
+    width: 100%;
+    height: 95vh;
+    padding: 120px 0 220px;
+    font-family: 'conthrax', sans-serif;
+    overflow: hidden;
+}
+#tokenlocker .row-1 img{
+    width: 300px;
+}
+
+.row .col-lg-6 h1{
+    letter-spacing: 3px;
+}
+#tokenlocker h3{
+    color:#d14cc9;
+}
+#tokenlocker .col-lg-6 img{
+    width: 700px;
+    margin-top: -140px;
+}
+.overlay img{
+    position: absolute;
+    width: 800px;
+    height: 850px;
+    top: 10%;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+#tokenlocker img{
+    user-select: none;
+}
